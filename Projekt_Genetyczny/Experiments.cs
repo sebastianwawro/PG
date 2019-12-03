@@ -16,7 +16,7 @@ namespace Projekt_Genetyczny
 
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append("Wartość spakowanych itemków\tWaga spakowanych itemków\tCzas pakowania\tCzy poprawne\r\n");
-            for (int rp = 0; rp< repeatCount; rp++)
+            for (int rp = 0; rp< repeatCount*8; rp++)
             {
                 Wynik wynik = new Wynik();
                 if (showCurrent) System.Console.WriteLine("testCommon  " + rp);
