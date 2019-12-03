@@ -7,6 +7,7 @@ using GeneticSharp.Domain.Populations;
 using GeneticSharp.Domain.Selections;
 using GeneticSharp.Domain.Terminations;
 using System;
+using System.IO;
 using System.Text;
 using System.Threading;
 
@@ -71,7 +72,7 @@ namespace Projekt_Genetyczny
             testAIOThread.Join();
 
             // oczekiwanie na cud
-            System.Console.WriteLine("kuniec");
+            if (Experiments.doOutput) System.Console.WriteLine("kuniec");
             System.Console.ReadLine();
         }
     }

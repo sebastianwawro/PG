@@ -27,13 +27,13 @@ namespace Projekt_Genetyczny
                 new System.IO.StreamReader(fileName);
             while ((line = file.ReadLine()) != null)
             {
-                //System.Console.WriteLine(line);
+                //if (Experiments.doOutput) System.Console.WriteLine(line);
 
                 counter++;
             }
 
             file.Close();
-            System.Console.WriteLine("W pliku było {0} lini.", counter);
+            if (Experiments.doOutput) System.Console.WriteLine("W pliku było {0} lini.", counter);
 
             System.IO.StreamReader file2 =
                new System.IO.StreamReader(fileName);
@@ -97,20 +97,20 @@ namespace Projekt_Genetyczny
         public static void displayAllContent(int counter, Item[] item, double back_volume)
         {
 
-            System.Console.WriteLine("Objetosc plecaka: " + (back_volume.ToString("F")));
+            if (Experiments.doOutput) System.Console.WriteLine("Objetosc plecaka: " + (back_volume.ToString("F")));
 
 
             for (int z = 0; z < counter - 1; z++)
             {
-                System.Console.WriteLine("");
-                System.Console.WriteLine("Indeks obiektu: " + item[z].item_number);
-                System.Console.WriteLine("Waga obiektu: " + (item[z].item_volume.ToString("F")));
-                System.Console.WriteLine("Wartość obiektu: " + (item[z].item_value.ToString("F")));
+                if (Experiments.doOutput) System.Console.WriteLine("");
+                if (Experiments.doOutput) System.Console.WriteLine("Indeks obiektu: " + item[z].item_number);
+                if (Experiments.doOutput) System.Console.WriteLine("Waga obiektu: " + (item[z].item_volume.ToString("F")));
+                if (Experiments.doOutput) System.Console.WriteLine("Wartość obiektu: " + (item[z].item_value.ToString("F")));
 
             }
 
-            System.Console.WriteLine("");
-            System.Console.WriteLine("");
+            if (Experiments.doOutput) System.Console.WriteLine("");
+            if (Experiments.doOutput) System.Console.WriteLine("");
         }
 
         public static void saveFileWithResults(String fileName, StringBuilder content)

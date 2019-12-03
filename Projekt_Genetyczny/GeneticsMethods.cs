@@ -68,7 +68,7 @@ namespace Projekt_Genetyczny
                 if (suma_spakowanych <= back_volume)
                 {
                     double temp = (wartosc_spakowanych * (suma_spakowanych / back_volume));
-                    if (temp < 0) System.Console.WriteLine("LOL ");
+                    if (temp < 0) if (Experiments.doOutput) System.Console.WriteLine("LOL ");
                 }
 
 
@@ -84,13 +84,13 @@ namespace Projekt_Genetyczny
             var ga = new GeneticAlgorithm(population, fitness, selection, crossover, mutation);
             ga.Termination = new GenerationNumberTermination(100);
 
-            Console.WriteLine("GA running...");
+            if (Experiments.doOutput) System.Console.WriteLine("GA running...");
             ga.MutationProbability = 0.05f;
             ga.CrossoverProbability = 0.20f;
             //ga.Selection.
             ga.Start();
 
-            // FITNESS  Console.WriteLine("Best solution found has fitness = " + ga.BestChromosome.Fitness);
+            // FITNESS  if (Experiments.doOutput) System.Console.WriteLine("Best solution found has fitness = " + ga.BestChromosome.Fitness);
             wynikGA w = new wynikGA();
             w.ga = ga;
             w.ch = chromosome;
@@ -161,7 +161,7 @@ namespace Projekt_Genetyczny
                 if (suma_spakowanych <= back_volume)
                 {
                     double temp = (wartosc_spakowanych * (suma_spakowanych / back_volume));
-                    if (temp < 0) System.Console.WriteLine("LOL ");
+                    if (temp < 0) if (Experiments.doOutput) System.Console.WriteLine("LOL ");
                 }
 
 
@@ -177,13 +177,13 @@ namespace Projekt_Genetyczny
             GeneticAlgorithm ga = new GeneticAlgorithm(population, fitness, selection, crossover, mutation);
             ga.Termination = new GenerationNumberTermination(100);
 
-            Console.WriteLine("GA running...");
+            if (Experiments.doOutput) System.Console.WriteLine("GA running...");
             ga.MutationProbability = 0.05f;
             ga.CrossoverProbability = 0.20f;
             //ga.Selection.
             ga.Start();
 
-            // FITNESS  Console.WriteLine("Best solution found has fitness = " + ga.BestChromosome.Fitness);
+            // FITNESS  if (Experiments.doOutput) System.Console.WriteLine("Best solution found has fitness = " + ga.BestChromosome.Fitness);
             wynikGA w = new wynikGA();
             w.ga = ga;
             w.ch = chromosome;
@@ -221,7 +221,7 @@ namespace Projekt_Genetyczny
             if (suma_spakowanych <= back_volume )
             {
                 double temp= (wartosc_spakowanych * (suma_spakowanych / back_volume));
-                if (temp<0) System.Console.WriteLine("LOL ");
+                if (temp<0) if (Experiments.doOutput) System.Console.WriteLine("LOL ");
             }
 
 
